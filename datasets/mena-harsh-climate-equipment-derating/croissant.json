@@ -1,0 +1,333 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "dct": "http://purl.org/dc/terms/",
+    "sc": "https://schema.org/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileObject": "cr:fileObject",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform"
+  },
+  "@type": "sc:Dataset",
+  "name": "MENA Harsh-Climate Industrial Equipment Thermal Derating & ATEX/IP Specification Matrix (40C-55C)",
+  "description": "Engineering reference dataset providing 40C -> 45C -> 50C -> 55C ambient thermal derating factors, 1,100 W/m2 solar enclosure rules, IP sand/dust ingress ratings, ATEX/IECEx extended-ambient rules, and NACE MR0175 / ISA-71.04 G3 sour-gas specifications across LV/MV VFDs, IEC motors, PLCs, 24VDC PSUs, UPS batteries, 12kV/36kV MV switchgear, LV ACBs, and process transmitters in Iraq and Gulf plants.",
+  "dct:conformsTo": "http://mlcommons.org/croissant/1.0",
+  "version": "1.0.1",
+  "datePublished": "2026-11-22",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "url": "https://github.com/hyder8891/tpc-open-engineering-datasets/tree/main/datasets/mena-harsh-climate-equipment-derating",
+  "inLanguage": [
+    "en",
+    "ar"
+  ],
+  "keywords": [
+    "55C ambient derating",
+    "Iraq substation switchgear derating",
+    "VFD thermal derating",
+    "IEC 62271-200 50C",
+    "ATEX extended ambient Ta",
+    "NACE MR0175 sour gas",
+    "The Power Contractor"
+  ],
+  "creator": {
+    "@type": "sc:Organization",
+    "name": "The Power Contractor",
+    "alternateName": [
+      "TPC",
+      "المتعهد للطاقة"
+    ],
+    "url": "https://pc-cn.com",
+    "email": "info@pc-cn.com",
+    "telephone": "+86-153-1498-7933",
+    "address": {
+      "@type": "sc:PostalAddress",
+      "streetAddress": "Jiangning District, Kaichen Street No.128",
+      "addressLocality": "Nanjing",
+      "addressRegion": "Jiangsu",
+      "addressCountry": "CN"
+    }
+  },
+  "publisher": {
+    "@type": "sc:Organization",
+    "name": "The Power Contractor",
+    "alternateName": [
+      "TPC",
+      "المتعهد للطاقة"
+    ],
+    "url": "https://pc-cn.com",
+    "email": "info@pc-cn.com",
+    "telephone": "+86-153-1498-7933",
+    "address": {
+      "@type": "sc:PostalAddress",
+      "streetAddress": "Jiangning District, Kaichen Street No.128",
+      "addressLocality": "Nanjing",
+      "addressRegion": "Jiangsu",
+      "addressCountry": "CN"
+    }
+  },
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "primary-csv",
+      "name": "mena_thermal_derating_matrix.csv",
+      "description": "UTF-8 tabular CSV dataset for MENA Harsh-Climate Industrial Equipment Thermal Derating & ATEX/IP Specification Matrix (40C-55C).",
+      "contentUrl": "mena_thermal_derating_matrix.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": "9292 B",
+      "sha256": "f7e005fb9d88faa1c638a935c0b63edb8f1dd9c693a84b198752e07dd4e2ea49"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "primary-json",
+      "name": "mena_thermal_derating_matrix.json",
+      "description": "Deterministic structured JSON twin for MENA Harsh-Climate Industrial Equipment Thermal Derating & ATEX/IP Specification Matrix (40C-55C).",
+      "contentUrl": "mena_thermal_derating_matrix.json",
+      "encodingFormat": "application/json",
+      "contentSize": "16123 B",
+      "sha256": "ec94441a1b5988f5ef6a70fc1f63ed06fb6ed7f36123b04c6eeaa7f332cf8416"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "mena_thermal_derating_records",
+      "name": "mena_thermal_derating_records",
+      "description": "Primary engineering table for MENA Harsh-Climate Industrial Equipment Thermal Derating & ATEX/IP Specification Matrix (40C-55C).",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "mena_thermal_derating_records/equipment_id",
+          "name": "equipment_id",
+          "description": "Deterministic derating record identifier.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "primary-csv"
+            },
+            "extract": {
+              "column": "equipment_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "mena_thermal_derating_records/equipment_class",
+          "name": "equipment_class",
+          "description": "Industrial equipment family and operating duty.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "primary-csv"
+            },
+            "extract": {
+              "column": "equipment_class"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "mena_thermal_derating_records/voltage_rating",
+          "name": "voltage_rating",
+          "description": "Nominal voltage and 50Hz Iraqi/MENA frequency scope.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "primary-csv"
+            },
+            "extract": {
+              "column": "voltage_rating"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "mena_thermal_derating_records/reference_standard",
+          "name": "reference_standard",
+          "description": "Governing IEC, IEEE, ISA, or NACE engineering standard.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "primary-csv"
+            },
+            "extract": {
+              "column": "reference_standard"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "mena_thermal_derating_records/base_design_temp_c",
+          "name": "base_design_temp_c",
+          "description": "Nominal OEM reference ambient temperature (degrees Celsius).",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "primary-csv"
+            },
+            "extract": {
+              "column": "base_design_temp_c"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "mena_thermal_derating_records/factor_40c",
+          "name": "factor_40c",
+          "description": "Continuous current/output (or VRLA life) multiplier at 40C ambient.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "primary-csv"
+            },
+            "extract": {
+              "column": "factor_40c"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "mena_thermal_derating_records/factor_45c",
+          "name": "factor_45c",
+          "description": "Continuous current/output (or VRLA life) multiplier at 45C ambient.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "primary-csv"
+            },
+            "extract": {
+              "column": "factor_45c"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "mena_thermal_derating_records/factor_50c",
+          "name": "factor_50c",
+          "description": "Continuous current/output (or VRLA life) multiplier at 50C ambient.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "primary-csv"
+            },
+            "extract": {
+              "column": "factor_50c"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "mena_thermal_derating_records/factor_55c",
+          "name": "factor_55c",
+          "description": "Continuous current/output (or VRLA life) multiplier at 55C ambient.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "primary-csv"
+            },
+            "extract": {
+              "column": "factor_55c"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "mena_thermal_derating_records/solar_radiation_enclosure_rule",
+          "name": "solar_radiation_enclosure_rule",
+          "description": "Solar radiation (up to 1,100 W/m2) and enclosure thermal rise engineering rule.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "primary-csv"
+            },
+            "extract": {
+              "column": "solar_radiation_enclosure_rule"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "mena_thermal_derating_records/min_ip_sand_dust_rating",
+          "name": "min_ip_sand_dust_rating",
+          "description": "Minimum IEC 60529 IP ingress and sand/dust filtration specification.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "primary-csv"
+            },
+            "extract": {
+              "column": "min_ip_sand_dust_rating"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "mena_thermal_derating_records/atex_iecex_zone_guidance",
+          "name": "atex_iecex_zone_guidance",
+          "description": "ATEX / IECEx hazardous-area ambient certification rule (Ta ceiling).",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "primary-csv"
+            },
+            "extract": {
+              "column": "atex_iecex_zone_guidance"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "mena_thermal_derating_records/sour_gas_nace_mr0175_note",
+          "name": "sour_gas_nace_mr0175_note",
+          "description": "H2S sour-gas corrosion & NACE MR0175 / ISA-71.04 G3 protection requirement.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "primary-csv"
+            },
+            "extract": {
+              "column": "sour_gas_nace_mr0175_note"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "mena_thermal_derating_records/mitigation_engineering_action",
+          "name": "mitigation_engineering_action",
+          "description": "Actionable procurement & sizing recommendation for Iraq/Gulf projects.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "primary-csv"
+            },
+            "extract": {
+              "column": "mitigation_engineering_action"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

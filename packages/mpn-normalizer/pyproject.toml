@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tpc-mpn-normalizer"
+version = "1.0.1"
+description = "Zero-dependency OEM industrial part-number (MPN) normalizer, OCR confusion repair engine, and brand classifier maintained by The Power Contractor (https://pc-cn.com)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "The Power Contractor", email = "info@pc-cn.com" }
+]
+keywords = [
+  "industrial-automation",
+  "mpn",
+  "bom",
+  "abb",
+  "siemens",
+  "allen-bradley",
+  "schneider",
+  "yokogawa",
+  "rosemount",
+  "bently-nevada",
+  "hagglunds",
+  "eagleburgmann"
+]
+
+[project.urls]
+Homepage = "https://pc-cn.com"
+Repository = "https://github.com/hyder8891/tpc-open-engineering-datasets"
+CrossReferenceTool = "https://pc-cn.com/tools/cross-reference"
+McpServer = "https://mcp.pc-cn.com/mcp"
+
+[tool.setuptools.packages.find]
+include = ["mpn_normalizer*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

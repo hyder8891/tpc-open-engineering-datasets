@@ -1,0 +1,334 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "dct": "http://purl.org/dc/terms/",
+    "sc": "https://schema.org/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileObject": "cr:fileObject",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform"
+  },
+  "@type": "sc:Dataset",
+  "name": "Iraq Industrial Import, HS 84/85/90 Customs & COSQC Pre-Shipment CoC Handbook",
+  "description": "Structured trilingual (EN / MSA Arabic / Mandarin) engineering compliance dataset mapping 33 core HS6 industrial equipment categories across Chapters 84, 85, and 90 to Iraq COSQC pre-shipment Certificate of Conformity (CoC) rules, authorized inspection agencies (SGS, TUV Rheinland, Bureau Veritas, Intertek), CCPIT Certificate of Origin legalization, 50Hz grid nameplate rules, and Umm Qasr / Khor al-Zubair / BSR / BGW / EBL port clearance requirements.",
+  "dct:conformsTo": "http://mlcommons.org/croissant/1.0",
+  "version": "1.0.1",
+  "datePublished": "2026-11-22",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "url": "https://github.com/hyder8891/tpc-open-engineering-datasets/tree/main/datasets/iraq-industrial-import-cosqc-handbook",
+  "inLanguage": [
+    "en",
+    "ar",
+    "zh-CN"
+  ],
+  "keywords": [
+    "Iraq customs",
+    "COSQC Certificate of Conformity",
+    "Umm Qasr port clearance",
+    "HS 84 85 90 industrial equipment",
+    "CCPIT Certificate of Origin",
+    "power plant spare parts Iraq",
+    "The Power Contractor"
+  ],
+  "creator": {
+    "@type": "sc:Organization",
+    "name": "The Power Contractor",
+    "alternateName": [
+      "TPC",
+      "المتعهد للطاقة"
+    ],
+    "url": "https://pc-cn.com",
+    "email": "info@pc-cn.com",
+    "telephone": "+86-153-1498-7933",
+    "address": {
+      "@type": "sc:PostalAddress",
+      "streetAddress": "Jiangning District, Kaichen Street No.128",
+      "addressLocality": "Nanjing",
+      "addressRegion": "Jiangsu",
+      "addressCountry": "CN"
+    }
+  },
+  "publisher": {
+    "@type": "sc:Organization",
+    "name": "The Power Contractor",
+    "alternateName": [
+      "TPC",
+      "المتعهد للطاقة"
+    ],
+    "url": "https://pc-cn.com",
+    "email": "info@pc-cn.com",
+    "telephone": "+86-153-1498-7933",
+    "address": {
+      "@type": "sc:PostalAddress",
+      "streetAddress": "Jiangning District, Kaichen Street No.128",
+      "addressLocality": "Nanjing",
+      "addressRegion": "Jiangsu",
+      "addressCountry": "CN"
+    }
+  },
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "primary-csv",
+      "name": "iraq_hs_cosqc_matrix.csv",
+      "description": "UTF-8 tabular CSV dataset for Iraq Industrial Import, HS 84/85/90 Customs & COSQC Pre-Shipment CoC Handbook.",
+      "contentUrl": "iraq_hs_cosqc_matrix.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": "17628 B",
+      "sha256": "53283b1b998493c5d730ba6cf6824546c97e231b0f5570c6f32339c3a688e7aa"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "primary-json",
+      "name": "iraq_hs_cosqc_matrix.json",
+      "description": "Deterministic structured JSON twin for Iraq Industrial Import, HS 84/85/90 Customs & COSQC Pre-Shipment CoC Handbook.",
+      "contentUrl": "iraq_hs_cosqc_matrix.json",
+      "encodingFormat": "application/json",
+      "contentSize": "36279 B",
+      "sha256": "0c4e20cb666237ce0e275d62fd753c29d9fdffff2a8c88228d4d323b495a45d5"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "iraq_hs_cosqc_records",
+      "name": "iraq_hs_cosqc_records",
+      "description": "Primary engineering table for Iraq Industrial Import, HS 84/85/90 Customs & COSQC Pre-Shipment CoC Handbook.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "iraq_hs_cosqc_records/hs6_code",
+          "name": "hs6_code",
+          "description": "6-digit Harmonized System code (Chapters 84, 85, 90).",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "primary-csv"
+            },
+            "extract": {
+              "column": "hs6_code"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "iraq_hs_cosqc_records/chapter",
+          "name": "chapter",
+          "description": "HS Chapter (84=Machinery, 85=Electrical, 90=Instrumentation).",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "primary-csv"
+            },
+            "extract": {
+              "column": "chapter"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "iraq_hs_cosqc_records/equipment_category_en",
+          "name": "equipment_category_en",
+          "description": "Industrial equipment description in English.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "primary-csv"
+            },
+            "extract": {
+              "column": "equipment_category_en"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "iraq_hs_cosqc_records/equipment_category_ar",
+          "name": "equipment_category_ar",
+          "description": "Industrial equipment description in formal Iraqi MSA Arabic (الفصحى).",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "primary-csv"
+            },
+            "extract": {
+              "column": "equipment_category_ar"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "iraq_hs_cosqc_records/equipment_category_zh",
+          "name": "equipment_category_zh",
+          "description": "Industrial equipment description in Simplified Mandarin (简体中文).",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "primary-csv"
+            },
+            "extract": {
+              "column": "equipment_category_zh"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "iraq_hs_cosqc_records/cosqc_icigi_status",
+          "name": "cosqc_icigi_status",
+          "description": "Iraq COSQC Pre-Shipment Inspection / CoC applicability category.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "primary-csv"
+            },
+            "extract": {
+              "column": "cosqc_icigi_status"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "iraq_hs_cosqc_records/iraqi_standard_or_iec_ref",
+          "name": "iraqi_standard_or_iec_ref",
+          "description": "Applicable Iraqi Quality Standard (IQS) or international IEC/API/ASME reference.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "primary-csv"
+            },
+            "extract": {
+              "column": "iraqi_standard_or_iec_ref"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "iraq_hs_cosqc_records/authorized_cabs",
+          "name": "authorized_cabs",
+          "description": "COSQC-authorized Conformity Assessment Bodies for pre-shipment CoC issuance.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "primary-csv"
+            },
+            "extract": {
+              "column": "authorized_cabs"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "iraq_hs_cosqc_records/indicative_customs_tariff_pct",
+          "name": "indicative_customs_tariff_pct",
+          "description": "Indicative Iraqi customs duty band (%) prior to investment/ministry exemptions.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "primary-csv"
+            },
+            "extract": {
+              "column": "indicative_customs_tariff_pct"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "iraq_hs_cosqc_records/project_law_exemption_eligible",
+          "name": "project_law_exemption_eligible",
+          "description": "Eligibility for tariff relief under Iraqi Investment Law or Ministry contracts.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "primary-csv"
+            },
+            "extract": {
+              "column": "project_law_exemption_eligible"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "iraq_hs_cosqc_records/ccpit_coo_legalization_required",
+          "name": "ccpit_coo_legalization_required",
+          "description": "Requirement for CCPIT / Chamber of Commerce Certificate of Origin + Iraqi Consulate stamp.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "primary-csv"
+            },
+            "extract": {
+              "column": "ccpit_coo_legalization_required"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "iraq_hs_cosqc_records/nameplate_frequency_voltage_rule",
+          "name": "nameplate_frequency_voltage_rule",
+          "description": "Mandatory nameplate, 50Hz grid, and documentation rules inspected at PSI and port.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "primary-csv"
+            },
+            "extract": {
+              "column": "nameplate_frequency_voltage_rule"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "iraq_hs_cosqc_records/recommended_iraq_entry_points",
+          "name": "recommended_iraq_entry_points",
+          "description": "Compliant sea ports and international air freight gateways in Iraq.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "primary-csv"
+            },
+            "extract": {
+              "column": "recommended_iraq_entry_points"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "iraq_hs_cosqc_records/tpc_catalog_category_slug",
+          "name": "tpc_catalog_category_slug",
+          "description": "Corresponding equipment category slug on https://pc-cn.com/catalog.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "primary-csv"
+            },
+            "extract": {
+              "column": "tpc_catalog_category_slug"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

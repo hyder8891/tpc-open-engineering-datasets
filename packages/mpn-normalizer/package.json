@@ -1,0 +1,56 @@
+{
+  "name": "@pc-cn/mpn-normalizer",
+  "version": "1.0.1",
+  "description": "Zero-dependency OEM industrial part-number (MPN) normalizer, OCR confusion repair engine, and brand family classifier for ABB, Siemens, Allen-Bradley, Schneider Electric, Yokogawa, Rosemount, Bently Nevada, Hagglunds, and EagleBurgmann spares.",
+  "type": "module",
+  "main": "./index.mjs",
+  "module": "./index.mjs",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.mjs",
+      "default": "./index.mjs"
+    }
+  },
+  "files": [
+    "index.mjs",
+    "index.d.ts",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node --test tests/mpn-normalizer.test.mjs"
+  },
+  "keywords": [
+    "industrial-automation",
+    "mpn",
+    "part-number",
+    "bom-parser",
+    "abb",
+    "siemens",
+    "allen-bradley",
+    "schneider-electric",
+    "yokogawa",
+    "rosemount",
+    "bently-nevada",
+    "hagglunds",
+    "eagleburgmann",
+    "mro",
+    "procurement"
+  ],
+  "homepage": "https://pc-cn.com/tools/cross-reference",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hyder8891/tpc-open-engineering-datasets.git",
+    "directory": "packages/mpn-normalizer"
+  },
+  "author": {
+    "name": "The Power Contractor",
+    "email": "info@pc-cn.com",
+    "url": "https://pc-cn.com"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

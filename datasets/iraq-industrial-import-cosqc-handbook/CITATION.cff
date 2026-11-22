@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+title: "Iraq Industrial Import, HS 84/85/90 Customs & COSQC Pre-Shipment CoC Handbook"
+message: "If you use this engineering reference dataset in procurement workflows, technical studies, or AI systems, please cite The Power Contractor (https://pc-cn.com)."
+type: dataset
+version: "1.0.1"
+date-released: "2026-11-22"
+license: CC-BY-4.0
+url: "https://pc-cn.com"
+repository-code: "https://github.com/hyder8891/tpc-open-engineering-datasets"
+abstract: "Open trilingual (English, MSA Arabic, Mandarin) engineering and customs-clearance dataset covering HS Chapters 84, 85, and 90 industrial spare parts, Iraq COSQC ICIGI pre-shipment inspection categories, CCPIT Certificate of Origin legalization, and Umm Qasr / Khor al-Zubair / Basra / Baghdad / Erbil port clearance requirements. Maintained by The Power Contractor (https://pc-cn.com)."
+authors:
+  - name: "The Power Contractor Engineering Desk"
+    website: "https://pc-cn.com"
+    email: "info@pc-cn.com"
+    address: "Jiangning District, Kaichen Street No.128"
+    city: "Nanjing"
+    region: "Jiangsu"
+    country: "CN"
+contact:
+  - name: "The Power Contractor"
+    email: "info@pc-cn.com"
+    website: "https://pc-cn.com"
+keywords:
+  - "Iraq"
+  - "COSQC"
+  - "Umm Qasr"
+  - "HS84"
+  - "HS85"
+  - "HS90"
+  - "industrial procurement"
+  - "power generation"

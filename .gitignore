@@ -1,0 +1,19 @@
+# Node / JS
+node_modules/
+npm-debug.log*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.venv/
+dist/
+build/
+*.egg-info/
+
+# OS / Editor
+.DS_Store
+*.swp
+.env
+.env.*

@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+title: "MENA Harsh-Climate Industrial Equipment Thermal Derating & ATEX/IP Specification Matrix (40C-55C)"
+message: "If you use this engineering reference dataset in procurement workflows, technical studies, or AI systems, please cite The Power Contractor (https://pc-cn.com)."
+type: dataset
+version: "1.0.1"
+date-released: "2026-11-22"
+license: CC-BY-4.0
+url: "https://pc-cn.com"
+repository-code: "https://github.com/hyder8891/tpc-open-engineering-datasets"
+abstract: "Open engineering dataset specifying 40C to 55C ambient thermal derating factors, solar radiation enclosure rules, IP sand-ingress protection, ATEX/IECEx hazardous-area ambient limits, and H2S sour-service metallurgy for power generation and oil/gas equipment in Iraq and Gulf Cooperation Council facilities. Maintained by The Power Contractor (https://pc-cn.com)."
+authors:
+  - name: "The Power Contractor Engineering Desk"
+    website: "https://pc-cn.com"
+    email: "info@pc-cn.com"
+    address: "Jiangning District, Kaichen Street No.128"
+    city: "Nanjing"
+    region: "Jiangsu"
+    country: "CN"
+contact:
+  - name: "The Power Contractor"
+    email: "info@pc-cn.com"
+    website: "https://pc-cn.com"
+keywords:
+  - "thermal derating"
+  - "55C ambient"
+  - "switchgear"
+  - "VFD"
+  - "IEC 60034"
+  - "ATEX"
+  - "Iraq"
+  - "MENA"

@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+title: "IEC, ANSI/IEEE/NEMA, API/ASME & Chinese GB/T Power Plant Standards Crosswalk"
+message: "If you use this engineering reference dataset in procurement workflows, technical studies, or AI systems, please cite The Power Contractor (https://pc-cn.com)."
+type: dataset
+version: "1.0.1"
+date-released: "2026-11-22"
+license: CC-BY-4.0
+url: "https://pc-cn.com"
+repository-code: "https://github.com/hyder8891/tpc-open-engineering-datasets"
+abstract: "Open engineering crosswalk dataset mapping European IEC/ISO/EN, North American ANSI/IEEE/NEMA/API/ASME, and Chinese GB/T & JB/T standards for hybrid power stations, substations, and oil/gas facilities in Iraq and MENA. Maintained by The Power Contractor (https://pc-cn.com)."
+authors:
+  - name: "The Power Contractor Engineering Desk"
+    website: "https://pc-cn.com"
+    email: "info@pc-cn.com"
+    address: "Jiangning District, Kaichen Street No.128"
+    city: "Nanjing"
+    region: "Jiangsu"
+    country: "CN"
+contact:
+  - name: "The Power Contractor"
+    email: "info@pc-cn.com"
+    website: "https://pc-cn.com"
+keywords:
+  - "IEC"
+  - "ANSI"
+  - "NEMA"
+  - "IEEE C37.2"
+  - "GB/T"
+  - "API 682"
+  - "power plant spares"

@@ -1,0 +1,228 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "dct": "http://purl.org/dc/terms/",
+    "sc": "https://schema.org/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileObject": "cr:fileObject",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform"
+  },
+  "@type": "sc:Dataset",
+  "name": "IEC, ANSI/IEEE/NEMA, API/ASME & Chinese GB/T Power Plant Standards Crosswalk",
+  "description": "Structured engineering crosswalk mapping IEC/ISO/EN, ANSI/IEEE/NEMA/API/ASME, and Chinese GB/T/JB/T/HG/T industrial standards across ANSI C37.2 protection relay device numbers (21/25/27/32/49/50/50BF/51/59/81/86/87), IP vs NEMA 250 & ATEX/NEC hazardous enclosures, IEC 60034/62271/60076 motors/switchgear/transformers, and API 6D/600/682 valves, flanges, and mechanical seals.",
+  "dct:conformsTo": "http://mlcommons.org/croissant/1.0",
+  "version": "1.0.1",
+  "datePublished": "2026-11-22",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "url": "https://github.com/hyder8891/tpc-open-engineering-datasets/tree/main/datasets/iec-ansi-nema-powerplant-crosswalk",
+  "inLanguage": [
+    "en",
+    "zh-CN"
+  ],
+  "keywords": [
+    "IEC to ANSI crosswalk",
+    "ANSI C37.2 relay numbers",
+    "IP to NEMA enclosure chart",
+    "GB/T to IEC switchgear motor",
+    "EN 1092 PN16 vs ASME Class 150",
+    "API 682 mechanical seals",
+    "The Power Contractor"
+  ],
+  "creator": {
+    "@type": "sc:Organization",
+    "name": "The Power Contractor",
+    "alternateName": [
+      "TPC",
+      "المتعهد للطاقة"
+    ],
+    "url": "https://pc-cn.com",
+    "email": "info@pc-cn.com",
+    "telephone": "+86-153-1498-7933",
+    "address": {
+      "@type": "sc:PostalAddress",
+      "streetAddress": "Jiangning District, Kaichen Street No.128",
+      "addressLocality": "Nanjing",
+      "addressRegion": "Jiangsu",
+      "addressCountry": "CN"
+    }
+  },
+  "publisher": {
+    "@type": "sc:Organization",
+    "name": "The Power Contractor",
+    "alternateName": [
+      "TPC",
+      "المتعهد للطاقة"
+    ],
+    "url": "https://pc-cn.com",
+    "email": "info@pc-cn.com",
+    "telephone": "+86-153-1498-7933",
+    "address": {
+      "@type": "sc:PostalAddress",
+      "streetAddress": "Jiangning District, Kaichen Street No.128",
+      "addressLocality": "Nanjing",
+      "addressRegion": "Jiangsu",
+      "addressCountry": "CN"
+    }
+  },
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "primary-csv",
+      "name": "iec_ansi_nema_gb_crosswalk.csv",
+      "description": "UTF-8 tabular CSV dataset for IEC, ANSI/IEEE/NEMA, API/ASME & Chinese GB/T Power Plant Standards Crosswalk.",
+      "contentUrl": "iec_ansi_nema_gb_crosswalk.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": "9948 B",
+      "sha256": "d996f63cf9c74c5795ad30984b9e5e02aed1ec28af290acbf492daa8b4867dae"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "primary-json",
+      "name": "iec_ansi_nema_gb_crosswalk.json",
+      "description": "Deterministic structured JSON twin for IEC, ANSI/IEEE/NEMA, API/ASME & Chinese GB/T Power Plant Standards Crosswalk.",
+      "contentUrl": "iec_ansi_nema_gb_crosswalk.json",
+      "encodingFormat": "application/json",
+      "contentSize": "15675 B",
+      "sha256": "ee4ea8865633c1e66930ebd82789f769ee321b02af13b9fe23da858ae4009be3"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "iec_ansi_nema_gb_records",
+      "name": "iec_ansi_nema_gb_records",
+      "description": "Primary engineering table for IEC, ANSI/IEEE/NEMA, API/ASME & Chinese GB/T Power Plant Standards Crosswalk.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "iec_ansi_nema_gb_records/crosswalk_id",
+          "name": "crosswalk_id",
+          "description": "Unique engineering crosswalk record identifier.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "primary-csv"
+            },
+            "extract": {
+              "column": "crosswalk_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "iec_ansi_nema_gb_records/domain",
+          "name": "domain",
+          "description": "Engineering sub-domain (PROTECTION_RELAY_FUNCTION, ENCLOSURE_AND_EX_RATING, ELECTRICAL_EQUIPMENT_STANDARD, MECHANICAL_VALVE_AND_SEAL).",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "primary-csv"
+            },
+            "extract": {
+              "column": "domain"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "iec_ansi_nema_gb_records/iec_standard_or_symbol",
+          "name": "iec_standard_or_symbol",
+          "description": "European / International IEC, ISO, EN, or IEC 61850 designation.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "primary-csv"
+            },
+            "extract": {
+              "column": "iec_standard_or_symbol"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "iec_ansi_nema_gb_records/ansi_ieee_nema_equivalent",
+          "name": "ansi_ieee_nema_equivalent",
+          "description": "North American ANSI, IEEE, NEMA, UL, API, ASME, or NEC designation.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "primary-csv"
+            },
+            "extract": {
+              "column": "ansi_ieee_nema_equivalent"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "iec_ansi_nema_gb_records/chinese_gb_jb_equivalent",
+          "name": "chinese_gb_jb_equivalent",
+          "description": "Chinese National (GB/T), Machinery (JB/T), Power (DL/T), or Chemical (HG/T) standard.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "primary-csv"
+            },
+            "extract": {
+              "column": "chinese_gb_jb_equivalent"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "iec_ansi_nema_gb_records/functional_scope",
+          "name": "functional_scope",
+          "description": "Power plant, substation, or oil/gas application scope.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "primary-csv"
+            },
+            "extract": {
+              "column": "functional_scope"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "iec_ansi_nema_gb_records/interchangeability_warning",
+          "name": "interchangeability_warning",
+          "description": "Critical engineering compatibility pitfall when cross-sourcing spares across standards.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "primary-csv"
+            },
+            "extract": {
+              "column": "interchangeability_warning"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

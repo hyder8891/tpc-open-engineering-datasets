@@ -1,0 +1,20 @@
+[project]
+name = "tpc-open-engineering-monorepo"
+version = "1.0.1"
+description = "Validation suite and Python libraries for The Power Contractor open industrial engineering datasets (https://pc-cn.com)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT AND CC-BY-4.0" }
+authors = [
+  { name = "The Power Contractor Engineering Desk", email = "info@pc-cn.com" }
+]
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "packages/mpn-normalizer"
+]
+testpaths = [
+  "packages/mpn-normalizer/tests",
+  "tests"
+]
+addopts = "-q"

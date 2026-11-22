@@ -1,0 +1,229 @@
+{
+  "dataset": "iec-ansi-nema-powerplant-crosswalk",
+  "version": "1.0.1",
+  "maintainer": {
+    "name": "The Power Contractor",
+    "arabic_name": "المتعهد للطاقة",
+    "url": "https://pc-cn.com",
+    "email": "info@pc-cn.com",
+    "whatsapp": "+86 153 1498 7933"
+  },
+  "records": [
+    {
+      "crosswalk_id": "PROT-21",
+      "domain": "PROTECTION_RELAY_FUNCTION",
+      "iec_standard_or_symbol": "IEC 60617: Z< | IEC 61850 LN: PDIS",
+      "ansi_ieee_nema_equivalent": "ANSI/IEEE C37.2 Device 21 — Distance Impedance Protection",
+      "chinese_gb_jb_equivalent": "GB/T 2900.49 / DL/T 478 距离保护 (21)",
+      "functional_scope": "132kV & 400kV transmission line zone-stepped impedance fault protection",
+      "interchangeability_warning": "Verify Mho vs Quadrilateral characteristic and CT secondary (1A IEC standard in Iraq vs 5A ANSI legacy)"
+    },
+    {
+      "crosswalk_id": "PROT-25",
+      "domain": "PROTECTION_RELAY_FUNCTION",
+      "iec_standard_or_symbol": "IEC 60617: SYN | IEC 61850 LN: RSYN",
+      "ansi_ieee_nema_equivalent": "ANSI/IEEE C37.2 Device 25 — Synchronizing / Synchrocheck",
+      "chinese_gb_jb_equivalent": "GB/T 14285 同期检定继电器 (25)",
+      "functional_scope": "Generator and 132kV/33kV tie-breaker phase-angle, slip-frequency (50Hz), and delta-V check",
+      "interchangeability_warning": "Confirm VT secondary connection (phase-to-phase 100V/110V vs phase-to-earth) before closing tie breaker"
+    },
+    {
+      "crosswalk_id": "PROT-27",
+      "domain": "PROTECTION_RELAY_FUNCTION",
+      "iec_standard_or_symbol": "IEC 60617: U< | IEC 61850 LN: PTUV",
+      "ansi_ieee_nema_equivalent": "ANSI/IEEE C37.2 Device 27 — Undervoltage Relay",
+      "chinese_gb_jb_equivalent": "GB/T 14598 低电压保护 (27)",
+      "functional_scope": "MV/LV busbar automatic transfer switch (ATS) initiation and motor bus undervoltage shedding",
+      "interchangeability_warning": "Coordinate time delay with upstream MV auto-recloser (Device 79) and VFD ride-through"
+    },
+    {
+      "crosswalk_id": "PROT-32",
+      "domain": "PROTECTION_RELAY_FUNCTION",
+      "iec_standard_or_symbol": "IEC 60617: P> / P< | IEC 61850 LN: PDOP / PDUP",
+      "ansi_ieee_nema_equivalent": "ANSI/IEEE C37.2 Device 32 — Directional / Reverse Power Relay",
+      "chinese_gb_jb_equivalent": "GB/T 14285 逆功率保护 (32R)",
+      "functional_scope": "Prevents gas/steam turbine motoring when prime-mover fuel valve trips",
+      "interchangeability_warning": "Set sensitive pickup (0.5%-3% Pn) for steam turbines vs 2%-6% Pn for industrial gas turbines"
+    },
+    {
+      "crosswalk_id": "PROT-49",
+      "domain": "PROTECTION_RELAY_FUNCTION",
+      "iec_standard_or_symbol": "IEC 60617: Theta> | IEC 61850 LN: PTTR",
+      "ansi_ieee_nema_equivalent": "ANSI/IEEE C37.2 Device 49 — Machine / Transformer Thermal Overload",
+      "chinese_gb_jb_equivalent": "GB/T 14285 热过负荷保护 (49)",
+      "functional_scope": "Stator/rotor thermal replica + PT100 RTD trip on MV motors, generators, and power transformers",
+      "interchangeability_warning": "Bias thermal model with ambient RTD input in 50C-55C Iraqi outdoor installations"
+    },
+    {
+      "crosswalk_id": "PROT-50-51",
+      "domain": "PROTECTION_RELAY_FUNCTION",
+      "iec_standard_or_symbol": "IEC 60617: I>> / I> | IEC 61850 LN: PIOC / PTOC",
+      "ansi_ieee_nema_equivalent": "ANSI/IEEE C37.2 Devices 50 & 51 — Instantaneous & Inverse-Time Overcurrent",
+      "chinese_gb_jb_equivalent": "GB/T 14285 速断与反时限过流保护 (50/51)",
+      "functional_scope": "Primary feeder, transformer backup, and MCC short-circuit / overload protection",
+      "interchangeability_warning": "CRITICAL: IEC Standard Inverse / Very Inverse curves (IEC 60255) have different equations from IEEE Moderately / Very Inverse curves — never mix curves on same radial feeder!"
+    },
+    {
+      "crosswalk_id": "PROT-50BF",
+      "domain": "PROTECTION_RELAY_FUNCTION",
+      "iec_standard_or_symbol": "IEC 61850 LN: RBRF",
+      "ansi_ieee_nema_equivalent": "ANSI/IEEE C37.2 Device 50BF — Breaker Failure Protection",
+      "chinese_gb_jb_equivalent": "DL/T 478 断路器失灵保护 (50BF)",
+      "functional_scope": "Trips adjacent buszone breakers via lockout (Device 86) if primary VCB/SF6 breaker fails to clear fault within 120-180 ms",
+      "interchangeability_warning": "Verify current-check reset time (<15 ms) to avoid nuisance busbar trip on high X/R DC offset"
+    },
+    {
+      "crosswalk_id": "PROT-59-81",
+      "domain": "PROTECTION_RELAY_FUNCTION",
+      "iec_standard_or_symbol": "IEC 60617: U> / f< / f> | IEC 61850 LN: PTOV / PTUF / PTOF",
+      "ansi_ieee_nema_equivalent": "ANSI/IEEE C37.2 Devices 59 & 81U/81O — Overvoltage & Under/Over-Frequency",
+      "chinese_gb_jb_equivalent": "GB/T 14285 过电压及低周减载保护 (59/81)",
+      "functional_scope": "50Hz Iraqi grid islanding detection, under-frequency load shedding (49.0-47.5 Hz), and generator surge protection",
+      "interchangeability_warning": "Ensure nominal frequency base is configured strictly to 50 Hz (not US factory default 60 Hz!)"
+    },
+    {
+      "crosswalk_id": "PROT-86",
+      "domain": "PROTECTION_RELAY_FUNCTION",
+      "iec_standard_or_symbol": "IEC 60617: Hand-Reset Lockout | Latching Trip Relay",
+      "ansi_ieee_nema_equivalent": "ANSI/IEEE C37.2 Device 86 — Master Lockout Auxiliary Relay",
+      "chinese_gb_jb_equivalent": "JB/T 3780 手动复归闭锁跳闸继电器 (86)",
+      "functional_scope": "High-speed (<8 ms) electromechanical latching trip & close-block for transformer/generator/busbar differential faults",
+      "interchangeability_warning": "Match substation DC auxiliary bus voltage exactly (110 VDC vs 125 VDC vs 220 VDC)"
+    },
+    {
+      "crosswalk_id": "PROT-87",
+      "domain": "PROTECTION_RELAY_FUNCTION",
+      "iec_standard_or_symbol": "IEC 60617: Id> | IEC 61850 LN: PDIF",
+      "ansi_ieee_nema_equivalent": "ANSI/IEEE C37.2 Device 87T / 87G / 87B — Biased / High-Impedance Differential",
+      "chinese_gb_jb_equivalent": "GB/T 14285 变压器/发电机/母线差动保护 (87)",
+      "functional_scope": "Unit differential protection for step-up transformers, generators, motors (>2 MW), and 132kV/33kV busbars",
+      "interchangeability_warning": "Match CT protection class (IEC 5P20 / PX vs IEEE C200/C400) and transformer vector group (e.g. Dyn11 / YNd11)"
+    },
+    {
+      "crosswalk_id": "ENC-IP20",
+      "domain": "ENCLOSURE_AND_EX_RATING",
+      "iec_standard_or_symbol": "IEC 60529 IP20",
+      "ansi_ieee_nema_equivalent": "NEMA 250 Type 1 (General Purpose Indoor)",
+      "chinese_gb_jb_equivalent": "GB/T 4208 IP20",
+      "functional_scope": "Finger-safe DIN-rail PLC/PSU/drive modules mounted inside outer sealed control cabinets",
+      "interchangeability_warning": "Never mount bare IP20/NEMA 1 hardware outside a sealed outer enclosure in dusty environments"
+    },
+    {
+      "crosswalk_id": "ENC-IP54",
+      "domain": "ENCLOSURE_AND_EX_RATING",
+      "iec_standard_or_symbol": "IEC 60529 IP54",
+      "ansi_ieee_nema_equivalent": "NEMA 250 Type 12 (Indoor Dust/Drip) / Type 3R (Outdoor Rainproof — Note: 3R is NOT dust-tight!)",
+      "chinese_gb_jb_equivalent": "GB/T 4208 IP54",
+      "functional_scope": "Indoor LV switchboards and MCC cubicles in industrial plant rooms",
+      "interchangeability_warning": "TRAP: US NEMA 3R outdoor panels allow fine Iraqi desert dust ingress! Specify NEMA 3S / 4 / 4X or IEC IP55/IP65 outdoors"
+    },
+    {
+      "crosswalk_id": "ENC-IP55",
+      "domain": "ENCLOSURE_AND_EX_RATING",
+      "iec_standard_or_symbol": "IEC 60529 IP55",
+      "ansi_ieee_nema_equivalent": "NEMA 250 Type 12 / Type 3S (Dust-tight + Low-Pressure Water Jet)",
+      "chinese_gb_jb_equivalent": "GB/T 4208 IP55",
+      "functional_scope": "Baseline TEFC industrial motor and outdoor VFD/junction cabinet ingress protection",
+      "interchangeability_warning": "NEMA ratings additionally test icing and rust resistance not covered by bare IEC 60529 IP digits"
+    },
+    {
+      "crosswalk_id": "ENC-IP65-66",
+      "domain": "ENCLOSURE_AND_EX_RATING",
+      "iec_standard_or_symbol": "IEC 60529 IP65 / IP66",
+      "ansi_ieee_nema_equivalent": "NEMA 250 Type 4 (Painted Steel) / Type 4X (316 Stainless or GRP Corrosion-Resistant)",
+      "chinese_gb_jb_equivalent": "GB/T 4208 IP65 / IP66",
+      "functional_scope": "Field instrumentation, marshalling boxes, and oilfield outdoor control panels subject to sandstorms & hose-down",
+      "interchangeability_warning": "For Basra coastal / sour-gas atmospheres, bare IP66 carbon steel is insufficient — require NEMA 4X / 316L stainless steel"
+    },
+    {
+      "crosswalk_id": "ENC-EX-DB",
+      "domain": "ENCLOSURE_AND_EX_RATING",
+      "iec_standard_or_symbol": "IEC 60079-1: Ex db IIC T4 Gb (ATEX II 2G)",
+      "ansi_ieee_nema_equivalent": "NEC 500: Class I, Division 1, Groups B, C, D, T4 (NEMA 7) / NEC 505: Class I, Zone 1, AEx db IIC T4",
+      "chinese_gb_jb_equivalent": "GB/T 3836.2 Ex db IIC T4 Gb",
+      "functional_scope": "Flameproof motors, transmitters, actuators, and junction boxes in Zone 1 hydrocarbon areas",
+      "interchangeability_warning": "THREAD TRAP: IEC/ATEX enclosures use Metric ISO M20x1.5 / M25x1.5 entries; US NEC/NEMA 7 uses 1/2\" or 3/4\" NPT tapered threads — require certified Ex db thread adapters!"
+    },
+    {
+      "crosswalk_id": "ELEC-MOT-DIM",
+      "domain": "ELECTRICAL_EQUIPMENT_STANDARD",
+      "iec_standard_or_symbol": "IEC 60034-1 & IEC 60072-1 (Metric Frames e.g. 132M, 160L, 280S, 315M)",
+      "ansi_ieee_nema_equivalent": "NEMA MG 1 (Inch Frames e.g. 215T, 256T, 444T, 449T)",
+      "chinese_gb_jb_equivalent": "GB/T 755 & GB/T 4772.1 (Y2 / YE3 / YE4 Metric Frames — identical shaft/foot geometry to IEC 60072!)",
+      "functional_scope": "LV & MV induction motor mechanical shaft height, foot bolt pattern, shaft diameter, and thermal ratings",
+      "interchangeability_warning": "IEC and Chinese GB/T 4772 metric frames drop-in mechanically; NEMA T-frames have different shaft heights (inch) and require transition baseplates + coupling re-bore"
+    },
+    {
+      "crosswalk_id": "ELEC-MOT-EFF",
+      "domain": "ELECTRICAL_EQUIPMENT_STANDARD",
+      "iec_standard_or_symbol": "IEC 60034-30-1: IE3 (Premium) / IE4 (Super Premium) at 50 Hz",
+      "ansi_ieee_nema_equivalent": "NEMA MG 1 Table 12-12: NEMA Premium Efficiency (tested at 60 Hz)",
+      "chinese_gb_jb_equivalent": "GB 18613-2020: Grade 2 (= IE4) / Grade 3 (= IE3) at 50 Hz",
+      "functional_scope": "Minimum energy performance standard (MEPS) for three-phase industrial motors",
+      "interchangeability_warning": "Running a 460V 60Hz NEMA motor on Iraq's 400V 50Hz grid reduces speed by 16.7% (1800 -> 1500 RPM) and risks V/Hz magnetic saturation unless dual-rated 380-415V 50Hz!"
+    },
+    {
+      "crosswalk_id": "ELEC-SWG-MV",
+      "domain": "ELECTRICAL_EQUIPMENT_STANDARD",
+      "iec_standard_or_symbol": "IEC 62271-200 & IEC 62271-100 (LSC2B-PM, IAC AFLR)",
+      "ansi_ieee_nema_equivalent": "IEEE C37.20.2 (Metal-Clad Switchgear) & IEEE C37.04 / C37.09",
+      "chinese_gb_jb_equivalent": "GB/T 3906 (KYN28A-12 / KYN61-40.5) & GB/T 1984",
+      "functional_scope": "11kV (12kV) and 33kV (36kV/40.5kV) MV switchgear lineups and withdrawable vacuum circuit breakers",
+      "interchangeability_warning": "Chinese GB/T 40.5kV switchgear exceeds Iraq 36kV insulation class safely, but verify 31.5kA/40kA 3s vs 1s short-time withstand and English/Arabic mimic bus labels"
+    },
+    {
+      "crosswalk_id": "ELEC-SWG-LV",
+      "domain": "ELECTRICAL_EQUIPMENT_STANDARD",
+      "iec_standard_or_symbol": "IEC 61439-1 / IEC 61439-2 (Form 3b / Form 4b Separation) & IEC 60947-2",
+      "ansi_ieee_nema_equivalent": "UL 891 / UL 1558 / ANSI C37.20.1 & UL 489 /UL 1066",
+      "chinese_gb_jb_equivalent": "GB/T 7251.1 / GB/T 7251.12 (MNS / GCS / GCK) & GB/T 14048.2",
+      "functional_scope": "400V LV main distribution switchboards, draw-out MCC buckets, and ACBs/MCCBs",
+      "interchangeability_warning": "Iraqi Ministry tenders follow IEC 61439 Form 4b + Icu=Ics=100% (IEC 60947-2); bare UL 489 breakers without IEC 60947-2 dual marking may fail consultant review"
+    },
+    {
+      "crosswalk_id": "ELEC-XFMR",
+      "domain": "ELECTRICAL_EQUIPMENT_STANDARD",
+      "iec_standard_or_symbol": "IEC 60076-1..5 (Vector Group e.g. Dyn11, YNd11; ONAN/ONAF)",
+      "ansi_ieee_nema_equivalent": "IEEE C57.12.00 / C57.12.90 (OA/FA, 30 deg lag standard)",
+      "chinese_gb_jb_equivalent": "GB/T 1094.1..5 (S13 / S20 / SZ11 series, Dyn11 / YNd11)",
+      "functional_scope": "Distribution (11/0.415 kV) and substation power transformers (33/11 kV, 132/33 kV)",
+      "interchangeability_warning": "CRITICAL: ANSI standard secondary lags HV by 30 deg (equivalent to Dyn1), whereas Iraqi IEC distribution standard is Dyn11 (+30 deg lead) — paralleling Dyn1 with Dyn11 causes catastrophic circulating fault current!"
+    },
+    {
+      "crosswalk_id": "MECH-VALVE-BALL",
+      "domain": "MECHANICAL_VALVE_AND_SEAL",
+      "iec_standard_or_symbol": "ISO 14313 / ISO 17292",
+      "ansi_ieee_nema_equivalent": "API 6D / API 608 (Fire-Safe API 607 / API 6FA)",
+      "chinese_gb_jb_equivalent": "GB/T 19672 / GB/T 12237",
+      "functional_scope": "Trunnion and floating pipeline ball valves for oil, gas, and refinery service",
+      "interchangeability_warning": "Verify ASME B16.10 face-to-face length so replacement valve drops directly between existing welded pipe spools"
+    },
+    {
+      "crosswalk_id": "MECH-VALVE-GATE",
+      "domain": "MECHANICAL_VALVE_AND_SEAL",
+      "iec_standard_or_symbol": "ISO 10434 (Heavy Duty Bolted Bonnet)",
+      "ansi_ieee_nema_equivalent": "API 600 (Cast Steel >=2\") / API 602 (Forged Steel <=2\")",
+      "chinese_gb_jb_equivalent": "GB/T 12234 (API-equivalent series) / JB/T 7746",
+      "functional_scope": "Refinery, steam header, and oilfield high-pressure isolation gate valves",
+      "interchangeability_warning": "Note: GB/T 12234 has structural dimensions distinct from legacy GB/T 12232; always specify ASME B16.10 face-to-face + ASME B16.5 RF/RTJ flanges for Iraqi oilfields"
+    },
+    {
+      "crosswalk_id": "MECH-FLANGE",
+      "domain": "MECHANICAL_VALVE_AND_SEAL",
+      "iec_standard_or_symbol": "EN 1092-1 PN10 / PN16 / PN25 / PN40",
+      "ansi_ieee_nema_equivalent": "ASME B16.5 Class 150 / Class 300 / Class 600",
+      "chinese_gb_jb_equivalent": "HG/T 20592 (PN series = EN) & HG/T 20615 (Class series = ASME B16.5) / GB/T 9119",
+      "functional_scope": "Control valve, flowmeter, and pump suction/discharge flange drilling & raised-face mating",
+      "interchangeability_warning": "DO NOT MATE PN16 TO CLASS 150! Bolt-circle diameter (BCD), bolt hole count, and flange OD differ across DN sizes — check piping isometric (water plants often PN16; oil & gas always ASME Class 150/300/600)"
+    },
+    {
+      "crosswalk_id": "MECH-SEAL-API",
+      "domain": "MECHANICAL_VALVE_AND_SEAL",
+      "iec_standard_or_symbol": "ISO 21049 / EN 12756 (DIN 24960 L1k)",
+      "ansi_ieee_nema_equivalent": "API 682 4th Edition (Categories 1, 2, 3; Piping Plans 11, 23, 52, 53B)",
+      "chinese_gb_jb_equivalent": "GB/T 14211 / JB/T 4127.1 / HG/T 2269",
+      "functional_scope": "Centrifugal pump cartridge and component mechanical seals (e.g. EagleBurgmann MG1 / M74 / Cartex)",
+      "interchangeability_warning": "EN 12756 (DIN 24960) defines standard European water/chemical pump cavity L1k; hydrocarbon API 610 pumps require full API 682 cartridge seal + flush plan verification"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "tpc-open-engineering-datasets",
+  "version": "1.0.1",
+  "private": true,
+  "type": "module",
+  "description": "Open industrial engineering datasets (Iraq COSQC HS 84/85/90 import compliance, MENA 55C equipment thermal derating, IEC/ANSI/NEMA/GB-T power plant crosswalk), @pc-cn/mpn-normalizer library, and off-site entity execution kit maintained by The Power Contractor (https://pc-cn.com).",
+  "homepage": "https://pc-cn.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hyder8891/tpc-open-engineering-datasets.git"
+  },
+  "author": {
+    "name": "The Power Contractor Engineering Desk",
+    "email": "info@pc-cn.com",
+    "url": "https://pc-cn.com"
+  },
+  "license": "MIT AND CC-BY-4.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "test": "node --test packages/mpn-normalizer/tests/*.test.mjs tests/*.test.mjs",
+    "indexnow:dry-run": "node ops-kit/submit-indexnow.mjs --dry-run"
+  }
+}
